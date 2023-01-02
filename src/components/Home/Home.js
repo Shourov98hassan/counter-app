@@ -16,8 +16,8 @@ const Home = () => {
     return (
         <div>
            <h1>{count}</h1>
-           <button onClick={handleIncrease}>Increase</button>
-           <button onClick={handleDecrease}>Decrease</button>
+           <button onClick={handleIncrease} disabled={count>4?true:false}>Increase</button>
+           <button onClick={handleDecrease} disabled={count<1?true:false}>Decrease</button>
         </div>
     );
 };
