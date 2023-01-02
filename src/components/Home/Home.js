@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Home.css'
 
 const Home = () => {
     const [count,setCount] = useState(0);
@@ -19,7 +20,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className='count'>
            <h1>{count}</h1>
            <button onClick={handleIncrease} disabled={count>4?true:false}>Increase</button>
            <button onClick={handleDecrease} disabled={count<1?true:false}>Decrease</button>
